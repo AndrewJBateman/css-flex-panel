@@ -3,8 +3,10 @@ const panels = document.querySelectorAll('.panel');
 function toggleOpen() {
   this.classList.toggle('open'); 
 }
+
 function toggleActive(e) {
-  if(e.propertyName.includes('flex')) {
+  console.log('property name: ', e.propertyName); // returns flex-grow, font-size, transform
+  if(e.propertyName.includes('flex')) { // to work with all browsers, incl firefox
      this.classList.toggle('open-active');
   }
 }
